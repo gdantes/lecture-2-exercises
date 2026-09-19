@@ -30,7 +30,7 @@ class Cart:
         if not item["available"]:
             raise OutOfStockError("Item is not available.")
         for line in self.lines:
-             if line["item_id"] == item["id"]:
+                if line["item_id"] == item["id"]:
                     line["qty"] += qty
                     return
         self.lines.append({
