@@ -22,6 +22,7 @@ class Cart:
         self.lines: list[dict] = []
 
     def add_item(self, item: dict, qty: int = 1) -> None:
+    def add_item(self, item: dict, qty: int = 1) -> None:
         # TODO: validate FIRST, then mutate.
         #   if qty < 1:                 raise ValueError(...)
         #   if not item["available"]:   raise OutOfStockError(...)
@@ -49,7 +50,7 @@ class Cart:
                     line for line in self.lines 
                     if line["item_id"] != item_id
                 ]
-
+        
     def total(self) -> float:
         return round(sum(line["price"] * line["qty"] for line in self.lines), 2)
 
