@@ -63,4 +63,4 @@ def test_removing_item_updates_total():
     cart.add_item(RAMEN, 1)      # 16.50
     cart.remove_item(GYOZA["id"])
     assert len(cart.lines) == 1
-    assert cart.total() == 16.50
+    assert cart.total() == 16.5

@@ -22,7 +22,6 @@ class Cart:
         self.lines: list[dict] = []
 
     def add_item(self, item: dict, qty: int = 1) -> None:
-    def add_item(self, item: dict, qty: int = 1) -> None:
         # TODO: validate FIRST, then mutate.
         #   if qty < 1:                 raise ValueError(...)
         #   if not item["available"]:   raise OutOfStockError(...)
